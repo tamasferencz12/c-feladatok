@@ -4,21 +4,24 @@
 
 using namespace std;
 
+int osszeg (int szam)
+{
+    int i=1, ossz=0;
+    while (i <= szam)
+    {
+        ossz += i;
+        i++;
+    }
+    return ossz;
+}
+
 int main()
 {
-  unsigned int n, i = 1, ossz = 0;
+    unsigned int n, i = 1, ossz = 0;
 
-  cout << "Add meg az n-et: ";
-  cin >> n;
+    cout << "Add meg az n-et: ";
+    cin >> n;
+    cout << osszeg(n) << endl;
 
-  while (i <= n)
-  {
-
-    ossz += i;
-    i++;
-  }
-
-  cout << ossz << endl;
-
-  return 0;
+    return 0;
 }
