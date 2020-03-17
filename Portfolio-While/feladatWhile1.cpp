@@ -4,7 +4,7 @@
 
 using namespace std;
 
-int osszeg (int szam)
+int osszegsz (int szam)
 {
     int i=1, ossz=0;
     while (i <= szam)
@@ -21,7 +21,7 @@ int main()
 
     cout << "Add meg az n-et: ";
     cin >> n;
-    cout << osszeg(n) << endl;
+    cout << osszegsz(n) << endl;
 
     return 0;
 }
