@@ -5,6 +5,11 @@ using namespace std;
 
 bool prim(int szam)
 {
+    if (szam == 0)
+    {
+        return false;
+    }
+
     int n = szam;
     if (szam < 0)
     {
@@ -19,7 +24,7 @@ bool prim(int szam)
         }
     }
 
-    return szam > 0 ? true : false;
+    return true;
 }
 
 int main()
@@ -31,12 +36,13 @@ int main()
         cout << "Adj meg egy termeszetes szamot: ";
         cin >> szam;
 
-        if (prim(szam))
+        if (szam > 0 && prim(szam))
         {
             cout << szam << " prim" << endl;
             x++;
         }
     }
+
     cout << "Primaszamok szama: " << x << endl;
 
     return 0;
