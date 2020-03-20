@@ -4,8 +4,8 @@ using namespace std;
 
 int main()
 {
-    unsigned int szam, parossz=0,x=0;
-    float atlag;
+    unsigned int szam,x=0;
+    float atlag,parossz=0;
 
     while (szam != 0)
     {
@@ -16,12 +16,10 @@ int main()
             parossz=parossz + szam;
             x++;
         }
-        szam /= 10;
     }
-
     atlag = parossz/x;
 
-    cout << "A paros szamok atlaganak egesz resze= " << atlag << endl;
+    cout << "A paros szamok atlaganak= " << atlag << endl;
 
     return 0;
 }
