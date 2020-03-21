@@ -1,39 +1,34 @@
 #include <iostream>
-#include <cmath>
+
 using namespace std;
 
 int main()
 {
     unsigned short n,r;
-    bool igaz=true;
+    bool ok=true;
+
+    cout<< "Add meg a tomb meretet: ";
+    cin>>n;
 
     int v[n];
-
-    while(v[n] != 0){
-
-        cout << "Adj meg egy tagot: ";
-        cin >> v[n];
+    for (unsigned short i=0;i<n;i++)
+    {
+        cout <<"v[" << i << "]= ";
+        cin >>v[i];
     }
-    cout << endl;
+    cout<<endl;
 
-    r=abs(v[n+1]-v[n]);
-
-    for (unsigned short i=0; i< n-1; i++)
+    r=v[1]-v[0];
+    for (unsigned short i=0;i<n-1;i++)
         if (v[i+1]-v[i]!=r)
-        {
-            igaz=false;
-            break;
-        }
+            {ok=false;
+            break;}
 
-    if (igaz)
-    {
-        cout << "Szamtani sorozat!" <<endl;
-    }
+    if (ok)
+        cout <<"Szamtani sorozat."<<endl;
     else
-    {
-        cout << "Nem szamtani sorozat!" <<endl;
-    }
+        cout <<"Nem szamtani sorozat."<<endl;
 
-    return 0;
+        return 0;
 }
 
