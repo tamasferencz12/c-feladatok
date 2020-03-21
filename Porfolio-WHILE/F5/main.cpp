@@ -6,14 +6,19 @@ int main()
 {
     unsigned int szam, c, x=0, y=0;
 
-    while (szam != 0){
+    while (szam != 0)
+    {
         cout << "Adj be egy termeszetes szamot: ";
         cin >> szam;
-        y++;
-
-        if (szam % 2 != 0){
-            x++;
+        if (szam > 0)
+        {
+            y++;
+            if (szam % 2 != 0)
+            {
+                x++;
+            }
         }
+
     }
 
     c = (x*100)/y;

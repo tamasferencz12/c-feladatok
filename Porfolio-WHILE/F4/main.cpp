@@ -11,7 +11,7 @@ bool prim(int szam)
         n = -1 * szam;
     }
 
-    for (int i = 2; i <= sqrt(szam); i++)
+    for (int i = 2; i <= sqrt(n); i++)
     {
         if (n % i == 0)
         {
@@ -19,7 +19,7 @@ bool prim(int szam)
         }
     }
 
-    return true;
+    return szam > 0 ?true : false;
 }
 
 int main()
