@@ -4,7 +4,8 @@ using namespace std;
 
 int main()
 {
-    unsigned int szam, c, x=0, y=0;
+    unsigned int szam;
+    float c, x = 0, y = 0;
 
     while (szam != 0)
     {
@@ -21,10 +22,10 @@ int main()
 
     }
 
-    c = (x*100)/y;
+    cout << y << " " << x << endl;
+    c = (x * 100) / y;
 
     cout << "A beolvasott szamok paratlan szamainak szazaleka: " << c << "%" << endl;
-
 
     return 0;
 }
